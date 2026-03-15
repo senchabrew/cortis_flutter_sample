@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+package cortis_flutter_sample;
+
+message Scale {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
+
+enum SceneType {
+  SCENE_UNSPECIFIED = 0;
+  SCENE_CUBE = 1;
+  SCENE_SPHERE = 2;
+}
+
+// Command+Event パターン: Flutter → Unity のコマンド送信 + Unity → Flutter のイベント受信
+message Cube {
+  message FCommand {
+    message SetScale { Scale scale = 1; }
+    message Reset {}
+    message Jump { float height = 1; }
+    oneof command {
+      SetScale set_scale = 1;
+      Reset reset = 2;
+      Jump jump = 3;
+    }
+  }
+
+  message UEvent {
+    message ScaleChanged { Scale scale = 1; }
+    oneof event {
+      ScaleChanged scale_changed = 1;
+    }
+  }
+}
+
+// Command+Event パターン (非同期): Flutter → Unity のコマンド送信 + Unity → Flutter の状態通知
+message Scene {
+  enum Phase {
+    PHASE_UNSPECIFIED = 0;
+    PHASE_LOADING = 1;
+    PHASE_LOADED = 2;
+  }
+
+  message FCommand {
+    message LoadScene { SceneType scene = 1; }
+    oneof command {
+      LoadScene load_scene = 1;
+    }
+  }
+
+  message UEvent {
+    message PhaseChanged { Phase phase = 1; }
+    oneof event {
+      PhaseChanged phase_changed = 1;
+    }
+  }
+}
+
+// Command-only パターン: Flutter → Unity のコマンド受信のみ（イベント発行なし）
+message Effect {
+  message FCommand {
+    message PlaySound { string sound_name = 1; }
+    message Vibrate { float duration = 1; }
+    oneof command {
+      PlaySound play_sound = 1;
+      Vibrate vibrate = 2;
+    }
+  }
+}
+
+// Event-only パターン: Unity → Flutter のイベント発行のみ（コマンド受信なし）
+message Timer {
+  message UEvent {
+    message Tick { float elapsed = 1; }
+    message Milestone { int32 count = 1; }
+    oneof event {
+      Tick tick = 1;
+      Milestone milestone = 2;
+    }
+  }
+}
