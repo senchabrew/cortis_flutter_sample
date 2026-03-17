@@ -1,6 +1,6 @@
 # Cortis Flutter Sample
 
-Flutter と Unity 間の protobuf 通信を [Cortis](../cortis/) フレームワークで実現するデモアプリケーション。
+Flutter と Unity 間の protobuf 通信を [Cortis](https://github.com/senchabrew/cortis) フレームワークで実現するデモアプリケーション。
 
 Cortis の 3 つの通信パターン（Command+Event / Command-only / Event-only）を Flutter 側から操作・確認できる。
 
@@ -11,7 +11,7 @@ Flutter (Dart)                                          Unity (C#)
 +-------------------+                                   +-------------------+
 |                   |   protobuf bytes (base64)         |                   |
 |  ViewModel        |                                   |  Presenter        |
-|  (ChangeNotifier) |                                   |  [ProtoHandler]   |
+|  (@riverpod)      |                                   |  [ProtoHandler]   |
 |                   |                                   |                   |
 |  sendCommand() ---|---> UnityMessenger.sendCommand()  |                   |
 |                   |        |                          |                   |
