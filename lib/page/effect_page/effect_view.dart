@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cortis_flutter_sample/page/effect_page/effect_view_model.dart';
-import 'package:provider/provider.dart';
 
-class EffectPage extends StatelessWidget {
+class EffectPage extends ConsumerWidget {
   const EffectPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final viewModel = context.watch<EffectViewModel>();
+  Widget build(BuildContext context, WidgetRef ref) {
+    final viewModel = ref.read(effectViewModelProvider.notifier);
     final theme = Theme.of(context);
 
     final sounds = ['click', 'pop', 'swoosh', 'chime'];
@@ -96,7 +96,7 @@ class EffectPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Text(
-                  'Command-only: Flutter sends commands to Unity.\n'
+                  'Command-only: Flutter sends commands to the runtime.\n'
                   'No events are received back.',
                   style: theme.textTheme.bodyMedium?.copyWith(
                     color: theme.colorScheme.onSurfaceVariant,

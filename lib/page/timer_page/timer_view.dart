@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cortis_flutter_sample/page/timer_page/timer_view_model.dart';
-import 'package:provider/provider.dart';
 
-class TimerPage extends StatelessWidget {
+class TimerPage extends ConsumerWidget {
   const TimerPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final viewModel = context.watch<TimerViewModel>();
+  Widget build(BuildContext context, WidgetRef ref) {
+    final timerState = ref.watch(timerViewModelProvider);
     final theme = Theme.of(context);
 
     return Scaffold(
@@ -31,7 +31,7 @@ class TimerPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      viewModel.elapsed.toStringAsFixed(1),
+                      timerState.elapsed.toStringAsFixed(1),
                       style: theme.textTheme.displayLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: theme.colorScheme.primary,
@@ -59,7 +59,7 @@ class TimerPage extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Expanded(
-              child: viewModel.milestones.isEmpty
+              child: timerState.milestones.isEmpty
                   ? Center(
                       child: Text(
                         'Waiting for milestones...',
@@ -69,9 +69,9 @@ class TimerPage extends StatelessWidget {
                       ),
                     )
                   : ListView.builder(
-                      itemCount: viewModel.milestones.length,
+                      itemCount: timerState.milestones.length,
                       itemBuilder: (context, index) {
-                        final milestone = viewModel.milestones[index];
+                        final milestone = timerState.milestones[index];
                         return ListTile(
                           leading: Icon(
                             Icons.flag_rounded,

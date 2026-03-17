@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cortis_flutter_sample/component/axis_scale_slider.dart';
 import 'package:flutter_unity_widget_2/flutter_unity_widget_2.dart';
-import 'package:cortis_flutter_sample/infrastructure/unity_messenger.dart';
+import 'package:cortis_flutter_sample/main.dart';
 import 'package:cortis_flutter_sample/page/scale_control_page/scale_control_view_model.dart';
 import 'package:cortis_flutter_sample/page/scene_list_page/scene_list_view.dart';
-import 'package:cortis_flutter_sample/page/scene_list_page/scene_list_view_model.dart';
-import 'package:provider/provider.dart';
 
-class ScaleControlPage extends StatelessWidget {
+class ScaleControlPage extends ConsumerWidget {
   const ScaleControlPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final viewModel = context.watch<ScaleControlViewModel>();
+  Widget build(BuildContext context, WidgetRef ref) {
+    final scale = ref.watch(scaleControlViewModelProvider);
+    final viewModel = ref.read(scaleControlViewModelProvider.notifier);
+    final messenger = ref.read(unityMessengerProvider);
     final theme = Theme.of(context);
-    final messenger = context.read<UnityMessenger>();
 
     return Scaffold(
       appBar: AppBar(
@@ -49,19 +49,19 @@ class ScaleControlPage extends StatelessWidget {
                 children: [
                   AxisScaleSlider(
                     label: 'X',
-                    value: viewModel.scale.x,
+                    value: scale.x,
                     activeColor: Colors.red.shade400,
                     onChanged: viewModel.setX,
                   ),
                   AxisScaleSlider(
                     label: 'Y',
-                    value: viewModel.scale.y,
+                    value: scale.y,
                     activeColor: Colors.green.shade400,
                     onChanged: viewModel.setY,
                   ),
                   AxisScaleSlider(
                     label: 'Z',
-                    value: viewModel.scale.z,
+                    value: scale.z,
                     activeColor: Colors.blue.shade400,
                     onChanged: viewModel.setZ,
                   ),
@@ -82,12 +82,7 @@ class ScaleControlPage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (_) => ChangeNotifierProvider(
-                                  create: (_) => SceneListViewModel(
-                                    unityMessenger: messenger,
-                                  ),
-                                  child: const SceneListPage(),
-                                ),
+                                builder: (_) => const SceneListPage(),
                               ),
                             );
                           },

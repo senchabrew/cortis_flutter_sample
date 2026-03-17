@@ -81,3 +81,105 @@ message Timer {
     }
   }
 }
+
+// 3層ネストパターン: App → Player → Inventory
+// Flutter 側では parse().route().route() で多段ルーティング
+message Player {
+  message FCommand {
+    oneof command {
+      Inventory.FCommand inventory = 1;
+    }
+  }
+  message UEvent {
+    oneof event {
+      Inventory.UEvent inventory = 1;
+    }
+  }
+}
+
+message Inventory {
+  message FCommand {
+    message AddItem { string item_name = 1; }
+    message RemoveItem { string item_name = 1; }
+    oneof command {
+      AddItem add_item = 1;
+      RemoveItem remove_item = 2;
+    }
+  }
+  message UEvent {
+    message ItemListChanged { repeated string items = 1; }
+    oneof event {
+      ItemListChanged item_list_changed = 1;
+    }
+  }
+}
+
+// 共有 inner パターン: Notification は Game と Admin の両方から参照される
+// Unity 側では [ProtoRoute] で曖昧性を解消する
+// Flutter 側では parse().route() で明示的にパスを指定するので曖昧性は発生しない
+message Notification {
+  message FCommand {
+    message Dismiss { string notification_id = 1; }
+    oneof command {
+      Dismiss dismiss = 1;
+    }
+  }
+  message UEvent {
+    message Arrived { string notification_id = 1; string title = 2; }
+    oneof event {
+      Arrived arrived = 1;
+    }
+  }
+}
+
+message Game {
+  message FCommand {
+    oneof command {
+      Notification.FCommand notification = 1;
+    }
+  }
+  message UEvent {
+    oneof event {
+      Notification.UEvent notification = 1;
+    }
+  }
+}
+
+message Admin {
+  message FCommand {
+    oneof command {
+      Notification.FCommand notification = 1;
+    }
+  }
+  message UEvent {
+    oneof event {
+      Notification.UEvent notification = 1;
+    }
+  }
+}
+
+// Root wrapper: 各フィーチャーの Command / Event を oneof で包む
+// Gateway はこの型で通信し、各 Presenter は inner 型を [ProtoHandler] に指定することで
+// Source Generator がルーティングコードを自動生成する
+message App {
+  message FCommand {
+    oneof command {
+      Cube.FCommand cube = 1;
+      Scene.FCommand scene = 2;
+      Effect.FCommand effect = 3;
+      Player.FCommand player = 4;
+      Game.FCommand game = 5;
+      Admin.FCommand admin = 6;
+    }
+  }
+  message UEvent {
+    oneof event {
+      Cube.UEvent cube = 1;
+      Scene.UEvent scene = 2;
+      Timer.UEvent timer = 3;
+      Player.UEvent player = 4;
+      Game.UEvent game = 5;
+      Admin.UEvent admin = 6;
+    }
+  }
+}

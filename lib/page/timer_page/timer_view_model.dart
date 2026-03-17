@@ -1,38 +1,53 @@
-import 'dart:async';
+import 'package:cortis_flutter/cortis_flutter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:cortis_flutter_sample/gen/proto/app.pb.dart';
 import 'package:cortis_flutter_sample/infrastructure/unity_messenger.dart';
+import 'package:cortis_flutter_sample/main.dart';
+import 'package:protobuf/protobuf.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'dart:async';
 
-class TimerViewModel with ChangeNotifier {
-  final UnityMessenger unityMessenger;
-  StreamSubscription? _subscription;
+part 'timer_view_model.g.dart';
 
-  TimerViewModel({required this.unityMessenger}) {
-    _subscription = unityMessenger.onEvent
-        .where((any) => any.canUnpackInto(Timer_UEvent()))
-        .map((any) => any.unpackInto(Timer_UEvent()))
-        .listen(_handleTimerEvent);
+class TimerState {
+  final double elapsed;
+  final List<int> milestones;
+
+  const TimerState({this.elapsed = 0.0, this.milestones = const []});
+
+  TimerState copyWith({double? elapsed, List<int>? milestones}) {
+    return TimerState(
+      elapsed: elapsed ?? this.elapsed,
+      milestones: milestones ?? this.milestones,
+    );
   }
+}
 
-  double _elapsed = 0.0;
-  double get elapsed => _elapsed;
+@riverpod
+@ProtoHandler(event: Timer_UEvent)
+class TimerViewModel extends _$TimerViewModel
+    with _$TimerViewModelProtoMixin<UnityMessenger> {
+  @override
+  UnityMessenger get messenger => ref.read(unityMessengerProvider);
 
-  final List<int> _milestones = [];
-  List<int> get milestones => List.unmodifiable(_milestones);
-
-  void _handleTimerEvent(Timer_UEvent event) {
-    if (event.hasTick()) {
-      _elapsed = event.tick.elapsed;
-      notifyListeners();
-    } else if (event.hasMilestone()) {
-      _milestones.add(event.milestone.count);
-      notifyListeners();
-    }
+  @override
+  TimerState build() {
+    initProtoHandler(
+      onDispose: ref.onDispose,
+      eventStream: messenger.onEvent
+          .parse(App_UEvent.new)
+          .route((e) => e.hasTimer(), (e) => e.timer),
+    );
+    return const TimerState();
   }
 
   @override
-  void dispose() {
-    _subscription?.cancel();
-    super.dispose();
+  void onTick(Timer_UEvent_Tick event) {
+    state = state.copyWith(elapsed: event.elapsed);
+  }
+
+  @override
+  void onMilestone(Timer_UEvent_Milestone event) {
+    state = state.copyWith(milestones: [...state.milestones, event.count]);
   }
 }

@@ -270,3 +270,288 @@ final $typed_data.Uint8List timerDescriptor = $convert.base64Decode(
     'ljaxIYCgdlbGFwc2VkGAEgASgCUgdlbGFwc2VkGiEKCU1pbGVzdG9uZRIUCgVjb3VudBgBIAEo'
     'BVIFY291bnRCBwoFZXZlbnQ=');
 
+@$core.Deprecated('Use playerDescriptor instead')
+const Player$json = {
+  '1': 'Player',
+  '3': [Player_FCommand$json, Player_UEvent$json],
+};
+
+@$core.Deprecated('Use playerDescriptor instead')
+const Player_FCommand$json = {
+  '1': 'FCommand',
+  '2': [
+    {'1': 'inventory', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Inventory.FCommand', '9': 0, '10': 'inventory'},
+  ],
+  '8': [
+    {'1': 'command'},
+  ],
+};
+
+@$core.Deprecated('Use playerDescriptor instead')
+const Player_UEvent$json = {
+  '1': 'UEvent',
+  '2': [
+    {'1': 'inventory', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Inventory.UEvent', '9': 0, '10': 'inventory'},
+  ],
+  '8': [
+    {'1': 'event'},
+  ],
+};
+
+/// Descriptor for `Player`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List playerDescriptor = $convert.base64Decode(
+    'CgZQbGF5ZXIaYAoIRkNvbW1hbmQSSQoJaW52ZW50b3J5GAEgASgLMikuY29ydGlzX2ZsdXR0ZX'
+    'Jfc2FtcGxlLkludmVudG9yeS5GQ29tbWFuZEgAUglpbnZlbnRvcnlCCQoHY29tbWFuZBpaCgZV'
+    'RXZlbnQSRwoJaW52ZW50b3J5GAEgASgLMicuY29ydGlzX2ZsdXR0ZXJfc2FtcGxlLkludmVudG'
+    '9yeS5VRXZlbnRIAFIJaW52ZW50b3J5QgcKBWV2ZW50');
+
+@$core.Deprecated('Use inventoryDescriptor instead')
+const Inventory$json = {
+  '1': 'Inventory',
+  '3': [Inventory_FCommand$json, Inventory_UEvent$json],
+};
+
+@$core.Deprecated('Use inventoryDescriptor instead')
+const Inventory_FCommand$json = {
+  '1': 'FCommand',
+  '2': [
+    {'1': 'add_item', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Inventory.FCommand.AddItem', '9': 0, '10': 'addItem'},
+    {'1': 'remove_item', '3': 2, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Inventory.FCommand.RemoveItem', '9': 0, '10': 'removeItem'},
+  ],
+  '3': [Inventory_FCommand_AddItem$json, Inventory_FCommand_RemoveItem$json],
+  '8': [
+    {'1': 'command'},
+  ],
+};
+
+@$core.Deprecated('Use inventoryDescriptor instead')
+const Inventory_FCommand_AddItem$json = {
+  '1': 'AddItem',
+  '2': [
+    {'1': 'item_name', '3': 1, '4': 1, '5': 9, '10': 'itemName'},
+  ],
+};
+
+@$core.Deprecated('Use inventoryDescriptor instead')
+const Inventory_FCommand_RemoveItem$json = {
+  '1': 'RemoveItem',
+  '2': [
+    {'1': 'item_name', '3': 1, '4': 1, '5': 9, '10': 'itemName'},
+  ],
+};
+
+@$core.Deprecated('Use inventoryDescriptor instead')
+const Inventory_UEvent$json = {
+  '1': 'UEvent',
+  '2': [
+    {'1': 'item_list_changed', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Inventory.UEvent.ItemListChanged', '9': 0, '10': 'itemListChanged'},
+  ],
+  '3': [Inventory_UEvent_ItemListChanged$json],
+  '8': [
+    {'1': 'event'},
+  ],
+};
+
+@$core.Deprecated('Use inventoryDescriptor instead')
+const Inventory_UEvent_ItemListChanged$json = {
+  '1': 'ItemListChanged',
+  '2': [
+    {'1': 'items', '3': 1, '4': 3, '5': 9, '10': 'items'},
+  ],
+};
+
+/// Descriptor for `Inventory`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List inventoryDescriptor = $convert.base64Decode(
+    'CglJbnZlbnRvcnkakQIKCEZDb21tYW5kEk4KCGFkZF9pdGVtGAEgASgLMjEuY29ydGlzX2ZsdX'
+    'R0ZXJfc2FtcGxlLkludmVudG9yeS5GQ29tbWFuZC5BZGRJdGVtSABSB2FkZEl0ZW0SVwoLcmVt'
+    'b3ZlX2l0ZW0YAiABKAsyNC5jb3J0aXNfZmx1dHRlcl9zYW1wbGUuSW52ZW50b3J5LkZDb21tYW'
+    '5kLlJlbW92ZUl0ZW1IAFIKcmVtb3ZlSXRlbRomCgdBZGRJdGVtEhsKCWl0ZW1fbmFtZRgBIAEo'
+    'CVIIaXRlbU5hbWUaKQoKUmVtb3ZlSXRlbRIbCglpdGVtX25hbWUYASABKAlSCGl0ZW1OYW1lQg'
+    'kKB2NvbW1hbmQaoQEKBlVFdmVudBJlChFpdGVtX2xpc3RfY2hhbmdlZBgBIAEoCzI3LmNvcnRp'
+    'c19mbHV0dGVyX3NhbXBsZS5JbnZlbnRvcnkuVUV2ZW50Lkl0ZW1MaXN0Q2hhbmdlZEgAUg9pdG'
+    'VtTGlzdENoYW5nZWQaJwoPSXRlbUxpc3RDaGFuZ2VkEhQKBWl0ZW1zGAEgAygJUgVpdGVtc0IH'
+    'CgVldmVudA==');
+
+@$core.Deprecated('Use notificationDescriptor instead')
+const Notification$json = {
+  '1': 'Notification',
+  '3': [Notification_FCommand$json, Notification_UEvent$json],
+};
+
+@$core.Deprecated('Use notificationDescriptor instead')
+const Notification_FCommand$json = {
+  '1': 'FCommand',
+  '2': [
+    {'1': 'dismiss', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Notification.FCommand.Dismiss', '9': 0, '10': 'dismiss'},
+  ],
+  '3': [Notification_FCommand_Dismiss$json],
+  '8': [
+    {'1': 'command'},
+  ],
+};
+
+@$core.Deprecated('Use notificationDescriptor instead')
+const Notification_FCommand_Dismiss$json = {
+  '1': 'Dismiss',
+  '2': [
+    {'1': 'notification_id', '3': 1, '4': 1, '5': 9, '10': 'notificationId'},
+  ],
+};
+
+@$core.Deprecated('Use notificationDescriptor instead')
+const Notification_UEvent$json = {
+  '1': 'UEvent',
+  '2': [
+    {'1': 'arrived', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Notification.UEvent.Arrived', '9': 0, '10': 'arrived'},
+  ],
+  '3': [Notification_UEvent_Arrived$json],
+  '8': [
+    {'1': 'event'},
+  ],
+};
+
+@$core.Deprecated('Use notificationDescriptor instead')
+const Notification_UEvent_Arrived$json = {
+  '1': 'Arrived',
+  '2': [
+    {'1': 'notification_id', '3': 1, '4': 1, '5': 9, '10': 'notificationId'},
+    {'1': 'title', '3': 2, '4': 1, '5': 9, '10': 'title'},
+  ],
+};
+
+/// Descriptor for `Notification`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List notificationDescriptor = $convert.base64Decode(
+    'CgxOb3RpZmljYXRpb24amwEKCEZDb21tYW5kElAKB2Rpc21pc3MYASABKAsyNC5jb3J0aXNfZm'
+    'x1dHRlcl9zYW1wbGUuTm90aWZpY2F0aW9uLkZDb21tYW5kLkRpc21pc3NIAFIHZGlzbWlzcxoy'
+    'CgdEaXNtaXNzEicKD25vdGlmaWNhdGlvbl9pZBgBIAEoCVIObm90aWZpY2F0aW9uSWRCCQoHY2'
+    '9tbWFuZBqrAQoGVUV2ZW50Ek4KB2Fycml2ZWQYASABKAsyMi5jb3J0aXNfZmx1dHRlcl9zYW1w'
+    'bGUuTm90aWZpY2F0aW9uLlVFdmVudC5BcnJpdmVkSABSB2Fycml2ZWQaSAoHQXJyaXZlZBInCg'
+    '9ub3RpZmljYXRpb25faWQYASABKAlSDm5vdGlmaWNhdGlvbklkEhQKBXRpdGxlGAIgASgJUgV0'
+    'aXRsZUIHCgVldmVudA==');
+
+@$core.Deprecated('Use gameDescriptor instead')
+const Game$json = {
+  '1': 'Game',
+  '3': [Game_FCommand$json, Game_UEvent$json],
+};
+
+@$core.Deprecated('Use gameDescriptor instead')
+const Game_FCommand$json = {
+  '1': 'FCommand',
+  '2': [
+    {'1': 'notification', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Notification.FCommand', '9': 0, '10': 'notification'},
+  ],
+  '8': [
+    {'1': 'command'},
+  ],
+};
+
+@$core.Deprecated('Use gameDescriptor instead')
+const Game_UEvent$json = {
+  '1': 'UEvent',
+  '2': [
+    {'1': 'notification', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Notification.UEvent', '9': 0, '10': 'notification'},
+  ],
+  '8': [
+    {'1': 'event'},
+  ],
+};
+
+/// Descriptor for `Game`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List gameDescriptor = $convert.base64Decode(
+    'CgRHYW1lGmkKCEZDb21tYW5kElIKDG5vdGlmaWNhdGlvbhgBIAEoCzIsLmNvcnRpc19mbHV0dG'
+    'VyX3NhbXBsZS5Ob3RpZmljYXRpb24uRkNvbW1hbmRIAFIMbm90aWZpY2F0aW9uQgkKB2NvbW1h'
+    'bmQaYwoGVUV2ZW50ElAKDG5vdGlmaWNhdGlvbhgBIAEoCzIqLmNvcnRpc19mbHV0dGVyX3NhbX'
+    'BsZS5Ob3RpZmljYXRpb24uVUV2ZW50SABSDG5vdGlmaWNhdGlvbkIHCgVldmVudA==');
+
+@$core.Deprecated('Use adminDescriptor instead')
+const Admin$json = {
+  '1': 'Admin',
+  '3': [Admin_FCommand$json, Admin_UEvent$json],
+};
+
+@$core.Deprecated('Use adminDescriptor instead')
+const Admin_FCommand$json = {
+  '1': 'FCommand',
+  '2': [
+    {'1': 'notification', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Notification.FCommand', '9': 0, '10': 'notification'},
+  ],
+  '8': [
+    {'1': 'command'},
+  ],
+};
+
+@$core.Deprecated('Use adminDescriptor instead')
+const Admin_UEvent$json = {
+  '1': 'UEvent',
+  '2': [
+    {'1': 'notification', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Notification.UEvent', '9': 0, '10': 'notification'},
+  ],
+  '8': [
+    {'1': 'event'},
+  ],
+};
+
+/// Descriptor for `Admin`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List adminDescriptor = $convert.base64Decode(
+    'CgVBZG1pbhppCghGQ29tbWFuZBJSCgxub3RpZmljYXRpb24YASABKAsyLC5jb3J0aXNfZmx1dH'
+    'Rlcl9zYW1wbGUuTm90aWZpY2F0aW9uLkZDb21tYW5kSABSDG5vdGlmaWNhdGlvbkIJCgdjb21t'
+    'YW5kGmMKBlVFdmVudBJQCgxub3RpZmljYXRpb24YASABKAsyKi5jb3J0aXNfZmx1dHRlcl9zYW'
+    '1wbGUuTm90aWZpY2F0aW9uLlVFdmVudEgAUgxub3RpZmljYXRpb25CBwoFZXZlbnQ=');
+
+@$core.Deprecated('Use appDescriptor instead')
+const App$json = {
+  '1': 'App',
+  '3': [App_FCommand$json, App_UEvent$json],
+};
+
+@$core.Deprecated('Use appDescriptor instead')
+const App_FCommand$json = {
+  '1': 'FCommand',
+  '2': [
+    {'1': 'cube', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Cube.FCommand', '9': 0, '10': 'cube'},
+    {'1': 'scene', '3': 2, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Scene.FCommand', '9': 0, '10': 'scene'},
+    {'1': 'effect', '3': 3, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Effect.FCommand', '9': 0, '10': 'effect'},
+    {'1': 'player', '3': 4, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Player.FCommand', '9': 0, '10': 'player'},
+    {'1': 'game', '3': 5, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Game.FCommand', '9': 0, '10': 'game'},
+    {'1': 'admin', '3': 6, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Admin.FCommand', '9': 0, '10': 'admin'},
+  ],
+  '8': [
+    {'1': 'command'},
+  ],
+};
+
+@$core.Deprecated('Use appDescriptor instead')
+const App_UEvent$json = {
+  '1': 'UEvent',
+  '2': [
+    {'1': 'cube', '3': 1, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Cube.UEvent', '9': 0, '10': 'cube'},
+    {'1': 'scene', '3': 2, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Scene.UEvent', '9': 0, '10': 'scene'},
+    {'1': 'timer', '3': 3, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Timer.UEvent', '9': 0, '10': 'timer'},
+    {'1': 'player', '3': 4, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Player.UEvent', '9': 0, '10': 'player'},
+    {'1': 'game', '3': 5, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Game.UEvent', '9': 0, '10': 'game'},
+    {'1': 'admin', '3': 6, '4': 1, '5': 11, '6': '.cortis_flutter_sample.Admin.UEvent', '9': 0, '10': 'admin'},
+  ],
+  '8': [
+    {'1': 'event'},
+  ],
+};
+
+/// Descriptor for `App`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List appDescriptor = $convert.base64Decode(
+    'CgNBcHAajwMKCEZDb21tYW5kEjoKBGN1YmUYASABKAsyJC5jb3J0aXNfZmx1dHRlcl9zYW1wbG'
+    'UuQ3ViZS5GQ29tbWFuZEgAUgRjdWJlEj0KBXNjZW5lGAIgASgLMiUuY29ydGlzX2ZsdXR0ZXJf'
+    'c2FtcGxlLlNjZW5lLkZDb21tYW5kSABSBXNjZW5lEkAKBmVmZmVjdBgDIAEoCzImLmNvcnRpc1'
+    '9mbHV0dGVyX3NhbXBsZS5FZmZlY3QuRkNvbW1hbmRIAFIGZWZmZWN0EkAKBnBsYXllchgEIAEo'
+    'CzImLmNvcnRpc19mbHV0dGVyX3NhbXBsZS5QbGF5ZXIuRkNvbW1hbmRIAFIGcGxheWVyEjoKBG'
+    'dhbWUYBSABKAsyJC5jb3J0aXNfZmx1dHRlcl9zYW1wbGUuR2FtZS5GQ29tbWFuZEgAUgRnYW1l'
+    'Ej0KBWFkbWluGAYgASgLMiUuY29ydGlzX2ZsdXR0ZXJfc2FtcGxlLkFkbWluLkZDb21tYW5kSA'
+    'BSBWFkbWluQgkKB2NvbW1hbmQa/AIKBlVFdmVudBI4CgRjdWJlGAEgASgLMiIuY29ydGlzX2Zs'
+    'dXR0ZXJfc2FtcGxlLkN1YmUuVUV2ZW50SABSBGN1YmUSOwoFc2NlbmUYAiABKAsyIy5jb3J0aX'
+    'NfZmx1dHRlcl9zYW1wbGUuU2NlbmUuVUV2ZW50SABSBXNjZW5lEjsKBXRpbWVyGAMgASgLMiMu'
+    'Y29ydGlzX2ZsdXR0ZXJfc2FtcGxlLlRpbWVyLlVFdmVudEgAUgV0aW1lchI+CgZwbGF5ZXIYBC'
+    'ABKAsyJC5jb3J0aXNfZmx1dHRlcl9zYW1wbGUuUGxheWVyLlVFdmVudEgAUgZwbGF5ZXISOAoE'
+    'Z2FtZRgFIAEoCzIiLmNvcnRpc19mbHV0dGVyX3NhbXBsZS5HYW1lLlVFdmVudEgAUgRnYW1lEj'
+    'sKBWFkbWluGAYgASgLMiMuY29ydGlzX2ZsdXR0ZXJfc2FtcGxlLkFkbWluLlVFdmVudEgAUgVh'
+    'ZG1pbkIHCgVldmVudA==');
+

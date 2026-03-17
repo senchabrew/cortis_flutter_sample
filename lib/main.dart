@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cortis_flutter_sample/infrastructure/unity_messenger.dart';
 import 'package:cortis_flutter_sample/page/scale_control_page/scale_control_view.dart';
-import 'package:cortis_flutter_sample/page/scale_control_page/scale_control_view_model.dart';
 import 'package:cortis_flutter_sample/page/effect_page/effect_view.dart';
-import 'package:cortis_flutter_sample/page/effect_page/effect_view_model.dart';
+import 'package:cortis_flutter_sample/page/inventory_page/inventory_view.dart';
+import 'package:cortis_flutter_sample/page/notification_page/notification_view.dart';
+import 'package:cortis_flutter_sample/page/notification_page/notification_view_model.dart';
 import 'package:cortis_flutter_sample/page/timer_page/timer_view.dart';
-import 'package:cortis_flutter_sample/page/timer_page/timer_view_model.dart';
-import 'package:provider/provider.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+part 'main.g.dart';
+
+@riverpod
+UnityMessenger unityMessenger(Ref ref) {
+  final messenger = UnityMessenger();
+  ref.onDispose(messenger.dispose);
+  return messenger;
+}
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        Provider<UnityMessenger>(
-          create: (_) => UnityMessenger(),
-          dispose: (_, messenger) => messenger.dispose(),
-        ),
-      ],
-      child: const MyApp(),
-    ),
-  );
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -44,13 +44,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
-    final messenger = context.read<UnityMessenger>();
 
     return Scaffold(
       body: SafeArea(
@@ -93,12 +92,7 @@ class HomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => ChangeNotifierProvider(
-                          create: (_) => ScaleControlViewModel(
-                            unityMessenger: messenger,
-                          ),
-                          child: const ScaleControlPage(),
-                        ),
+                        builder: (_) => const ScaleControlPage(),
                       ),
                     );
                   },
@@ -111,12 +105,7 @@ class HomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => ChangeNotifierProvider(
-                          create: (_) => TimerViewModel(
-                            unityMessenger: messenger,
-                          ),
-                          child: const TimerPage(),
-                        ),
+                        builder: (_) => const TimerPage(),
                       ),
                     );
                   },
@@ -129,17 +118,62 @@ class HomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => ChangeNotifierProvider(
-                          create: (_) => EffectViewModel(
-                            unityMessenger: messenger,
-                          ),
-                          child: const EffectPage(),
-                        ),
+                        builder: (_) => const EffectPage(),
                       ),
                     );
                   },
                   icon: const Icon(Icons.auto_fix_high_rounded),
                   label: const Text('Effect (Command-only)'),
+                ),
+                const SizedBox(height: 12),
+                OutlinedButton.icon(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const InventoryPage(),
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.inventory_2_rounded),
+                  label: const Text('Inventory (3-layer nesting)'),
+                ),
+                const SizedBox(height: 12),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: OutlinedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) =>
+                                  const NotificationPage(context: NotificationContext.game),
+                            ),
+                          );
+                        },
+                        icon: const Icon(Icons.sports_esports_rounded),
+                        label: const Text('Notif (Game)'),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: OutlinedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) =>
+                                  const NotificationPage(context: NotificationContext.admin),
+                            ),
+                          );
+                        },
+                        icon: const Icon(Icons.admin_panel_settings_rounded),
+                        label: const Text('Notif (Admin)'),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

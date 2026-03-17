@@ -1175,6 +1175,1442 @@ class Timer extends $pb.GeneratedMessage {
   static Timer? _defaultInstance;
 }
 
+enum Player_FCommand_Command {
+  inventory, 
+  notSet
+}
+
+class Player_FCommand extends $pb.GeneratedMessage {
+  factory Player_FCommand({
+    Inventory_FCommand? inventory,
+  }) {
+    final $result = create();
+    if (inventory != null) {
+      $result.inventory = inventory;
+    }
+    return $result;
+  }
+  Player_FCommand._() : super();
+  factory Player_FCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Player_FCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Player_FCommand_Command> _Player_FCommand_CommandByTag = {
+    1 : Player_FCommand_Command.inventory,
+    0 : Player_FCommand_Command.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Player.FCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Inventory_FCommand>(1, _omitFieldNames ? '' : 'inventory', subBuilder: Inventory_FCommand.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Player_FCommand clone() => Player_FCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Player_FCommand copyWith(void Function(Player_FCommand) updates) => super.copyWith((message) => updates(message as Player_FCommand)) as Player_FCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Player_FCommand create() => Player_FCommand._();
+  Player_FCommand createEmptyInstance() => create();
+  static $pb.PbList<Player_FCommand> createRepeated() => $pb.PbList<Player_FCommand>();
+  @$core.pragma('dart2js:noInline')
+  static Player_FCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Player_FCommand>(create);
+  static Player_FCommand? _defaultInstance;
+
+  Player_FCommand_Command whichCommand() => _Player_FCommand_CommandByTag[$_whichOneof(0)]!;
+  void clearCommand() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Inventory_FCommand get inventory => $_getN(0);
+  @$pb.TagNumber(1)
+  set inventory(Inventory_FCommand v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasInventory() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearInventory() => clearField(1);
+  @$pb.TagNumber(1)
+  Inventory_FCommand ensureInventory() => $_ensure(0);
+}
+
+enum Player_UEvent_Event {
+  inventory, 
+  notSet
+}
+
+class Player_UEvent extends $pb.GeneratedMessage {
+  factory Player_UEvent({
+    Inventory_UEvent? inventory,
+  }) {
+    final $result = create();
+    if (inventory != null) {
+      $result.inventory = inventory;
+    }
+    return $result;
+  }
+  Player_UEvent._() : super();
+  factory Player_UEvent.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Player_UEvent.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Player_UEvent_Event> _Player_UEvent_EventByTag = {
+    1 : Player_UEvent_Event.inventory,
+    0 : Player_UEvent_Event.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Player.UEvent', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Inventory_UEvent>(1, _omitFieldNames ? '' : 'inventory', subBuilder: Inventory_UEvent.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Player_UEvent clone() => Player_UEvent()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Player_UEvent copyWith(void Function(Player_UEvent) updates) => super.copyWith((message) => updates(message as Player_UEvent)) as Player_UEvent;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Player_UEvent create() => Player_UEvent._();
+  Player_UEvent createEmptyInstance() => create();
+  static $pb.PbList<Player_UEvent> createRepeated() => $pb.PbList<Player_UEvent>();
+  @$core.pragma('dart2js:noInline')
+  static Player_UEvent getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Player_UEvent>(create);
+  static Player_UEvent? _defaultInstance;
+
+  Player_UEvent_Event whichEvent() => _Player_UEvent_EventByTag[$_whichOneof(0)]!;
+  void clearEvent() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Inventory_UEvent get inventory => $_getN(0);
+  @$pb.TagNumber(1)
+  set inventory(Inventory_UEvent v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasInventory() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearInventory() => clearField(1);
+  @$pb.TagNumber(1)
+  Inventory_UEvent ensureInventory() => $_ensure(0);
+}
+
+/// 3層ネストパターン: App → Player → Inventory
+/// Flutter 側では parse().route().route() で多段ルーティング
+class Player extends $pb.GeneratedMessage {
+  factory Player() => create();
+  Player._() : super();
+  factory Player.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Player.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Player', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Player clone() => Player()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Player copyWith(void Function(Player) updates) => super.copyWith((message) => updates(message as Player)) as Player;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Player create() => Player._();
+  Player createEmptyInstance() => create();
+  static $pb.PbList<Player> createRepeated() => $pb.PbList<Player>();
+  @$core.pragma('dart2js:noInline')
+  static Player getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Player>(create);
+  static Player? _defaultInstance;
+}
+
+class Inventory_FCommand_AddItem extends $pb.GeneratedMessage {
+  factory Inventory_FCommand_AddItem({
+    $core.String? itemName,
+  }) {
+    final $result = create();
+    if (itemName != null) {
+      $result.itemName = itemName;
+    }
+    return $result;
+  }
+  Inventory_FCommand_AddItem._() : super();
+  factory Inventory_FCommand_AddItem.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Inventory_FCommand_AddItem.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Inventory.FCommand.AddItem', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'itemName')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Inventory_FCommand_AddItem clone() => Inventory_FCommand_AddItem()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Inventory_FCommand_AddItem copyWith(void Function(Inventory_FCommand_AddItem) updates) => super.copyWith((message) => updates(message as Inventory_FCommand_AddItem)) as Inventory_FCommand_AddItem;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Inventory_FCommand_AddItem create() => Inventory_FCommand_AddItem._();
+  Inventory_FCommand_AddItem createEmptyInstance() => create();
+  static $pb.PbList<Inventory_FCommand_AddItem> createRepeated() => $pb.PbList<Inventory_FCommand_AddItem>();
+  @$core.pragma('dart2js:noInline')
+  static Inventory_FCommand_AddItem getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Inventory_FCommand_AddItem>(create);
+  static Inventory_FCommand_AddItem? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get itemName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set itemName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasItemName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearItemName() => clearField(1);
+}
+
+class Inventory_FCommand_RemoveItem extends $pb.GeneratedMessage {
+  factory Inventory_FCommand_RemoveItem({
+    $core.String? itemName,
+  }) {
+    final $result = create();
+    if (itemName != null) {
+      $result.itemName = itemName;
+    }
+    return $result;
+  }
+  Inventory_FCommand_RemoveItem._() : super();
+  factory Inventory_FCommand_RemoveItem.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Inventory_FCommand_RemoveItem.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Inventory.FCommand.RemoveItem', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'itemName')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Inventory_FCommand_RemoveItem clone() => Inventory_FCommand_RemoveItem()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Inventory_FCommand_RemoveItem copyWith(void Function(Inventory_FCommand_RemoveItem) updates) => super.copyWith((message) => updates(message as Inventory_FCommand_RemoveItem)) as Inventory_FCommand_RemoveItem;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Inventory_FCommand_RemoveItem create() => Inventory_FCommand_RemoveItem._();
+  Inventory_FCommand_RemoveItem createEmptyInstance() => create();
+  static $pb.PbList<Inventory_FCommand_RemoveItem> createRepeated() => $pb.PbList<Inventory_FCommand_RemoveItem>();
+  @$core.pragma('dart2js:noInline')
+  static Inventory_FCommand_RemoveItem getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Inventory_FCommand_RemoveItem>(create);
+  static Inventory_FCommand_RemoveItem? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get itemName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set itemName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasItemName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearItemName() => clearField(1);
+}
+
+enum Inventory_FCommand_Command {
+  addItem, 
+  removeItem, 
+  notSet
+}
+
+class Inventory_FCommand extends $pb.GeneratedMessage {
+  factory Inventory_FCommand({
+    Inventory_FCommand_AddItem? addItem,
+    Inventory_FCommand_RemoveItem? removeItem,
+  }) {
+    final $result = create();
+    if (addItem != null) {
+      $result.addItem = addItem;
+    }
+    if (removeItem != null) {
+      $result.removeItem = removeItem;
+    }
+    return $result;
+  }
+  Inventory_FCommand._() : super();
+  factory Inventory_FCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Inventory_FCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Inventory_FCommand_Command> _Inventory_FCommand_CommandByTag = {
+    1 : Inventory_FCommand_Command.addItem,
+    2 : Inventory_FCommand_Command.removeItem,
+    0 : Inventory_FCommand_Command.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Inventory.FCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1, 2])
+    ..aOM<Inventory_FCommand_AddItem>(1, _omitFieldNames ? '' : 'addItem', subBuilder: Inventory_FCommand_AddItem.create)
+    ..aOM<Inventory_FCommand_RemoveItem>(2, _omitFieldNames ? '' : 'removeItem', subBuilder: Inventory_FCommand_RemoveItem.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Inventory_FCommand clone() => Inventory_FCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Inventory_FCommand copyWith(void Function(Inventory_FCommand) updates) => super.copyWith((message) => updates(message as Inventory_FCommand)) as Inventory_FCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Inventory_FCommand create() => Inventory_FCommand._();
+  Inventory_FCommand createEmptyInstance() => create();
+  static $pb.PbList<Inventory_FCommand> createRepeated() => $pb.PbList<Inventory_FCommand>();
+  @$core.pragma('dart2js:noInline')
+  static Inventory_FCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Inventory_FCommand>(create);
+  static Inventory_FCommand? _defaultInstance;
+
+  Inventory_FCommand_Command whichCommand() => _Inventory_FCommand_CommandByTag[$_whichOneof(0)]!;
+  void clearCommand() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Inventory_FCommand_AddItem get addItem => $_getN(0);
+  @$pb.TagNumber(1)
+  set addItem(Inventory_FCommand_AddItem v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAddItem() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAddItem() => clearField(1);
+  @$pb.TagNumber(1)
+  Inventory_FCommand_AddItem ensureAddItem() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  Inventory_FCommand_RemoveItem get removeItem => $_getN(1);
+  @$pb.TagNumber(2)
+  set removeItem(Inventory_FCommand_RemoveItem v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasRemoveItem() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRemoveItem() => clearField(2);
+  @$pb.TagNumber(2)
+  Inventory_FCommand_RemoveItem ensureRemoveItem() => $_ensure(1);
+}
+
+class Inventory_UEvent_ItemListChanged extends $pb.GeneratedMessage {
+  factory Inventory_UEvent_ItemListChanged({
+    $core.Iterable<$core.String>? items,
+  }) {
+    final $result = create();
+    if (items != null) {
+      $result.items.addAll(items);
+    }
+    return $result;
+  }
+  Inventory_UEvent_ItemListChanged._() : super();
+  factory Inventory_UEvent_ItemListChanged.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Inventory_UEvent_ItemListChanged.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Inventory.UEvent.ItemListChanged', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'items')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Inventory_UEvent_ItemListChanged clone() => Inventory_UEvent_ItemListChanged()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Inventory_UEvent_ItemListChanged copyWith(void Function(Inventory_UEvent_ItemListChanged) updates) => super.copyWith((message) => updates(message as Inventory_UEvent_ItemListChanged)) as Inventory_UEvent_ItemListChanged;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Inventory_UEvent_ItemListChanged create() => Inventory_UEvent_ItemListChanged._();
+  Inventory_UEvent_ItemListChanged createEmptyInstance() => create();
+  static $pb.PbList<Inventory_UEvent_ItemListChanged> createRepeated() => $pb.PbList<Inventory_UEvent_ItemListChanged>();
+  @$core.pragma('dart2js:noInline')
+  static Inventory_UEvent_ItemListChanged getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Inventory_UEvent_ItemListChanged>(create);
+  static Inventory_UEvent_ItemListChanged? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get items => $_getList(0);
+}
+
+enum Inventory_UEvent_Event {
+  itemListChanged, 
+  notSet
+}
+
+class Inventory_UEvent extends $pb.GeneratedMessage {
+  factory Inventory_UEvent({
+    Inventory_UEvent_ItemListChanged? itemListChanged,
+  }) {
+    final $result = create();
+    if (itemListChanged != null) {
+      $result.itemListChanged = itemListChanged;
+    }
+    return $result;
+  }
+  Inventory_UEvent._() : super();
+  factory Inventory_UEvent.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Inventory_UEvent.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Inventory_UEvent_Event> _Inventory_UEvent_EventByTag = {
+    1 : Inventory_UEvent_Event.itemListChanged,
+    0 : Inventory_UEvent_Event.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Inventory.UEvent', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Inventory_UEvent_ItemListChanged>(1, _omitFieldNames ? '' : 'itemListChanged', subBuilder: Inventory_UEvent_ItemListChanged.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Inventory_UEvent clone() => Inventory_UEvent()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Inventory_UEvent copyWith(void Function(Inventory_UEvent) updates) => super.copyWith((message) => updates(message as Inventory_UEvent)) as Inventory_UEvent;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Inventory_UEvent create() => Inventory_UEvent._();
+  Inventory_UEvent createEmptyInstance() => create();
+  static $pb.PbList<Inventory_UEvent> createRepeated() => $pb.PbList<Inventory_UEvent>();
+  @$core.pragma('dart2js:noInline')
+  static Inventory_UEvent getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Inventory_UEvent>(create);
+  static Inventory_UEvent? _defaultInstance;
+
+  Inventory_UEvent_Event whichEvent() => _Inventory_UEvent_EventByTag[$_whichOneof(0)]!;
+  void clearEvent() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Inventory_UEvent_ItemListChanged get itemListChanged => $_getN(0);
+  @$pb.TagNumber(1)
+  set itemListChanged(Inventory_UEvent_ItemListChanged v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasItemListChanged() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearItemListChanged() => clearField(1);
+  @$pb.TagNumber(1)
+  Inventory_UEvent_ItemListChanged ensureItemListChanged() => $_ensure(0);
+}
+
+class Inventory extends $pb.GeneratedMessage {
+  factory Inventory() => create();
+  Inventory._() : super();
+  factory Inventory.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Inventory.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Inventory', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Inventory clone() => Inventory()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Inventory copyWith(void Function(Inventory) updates) => super.copyWith((message) => updates(message as Inventory)) as Inventory;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Inventory create() => Inventory._();
+  Inventory createEmptyInstance() => create();
+  static $pb.PbList<Inventory> createRepeated() => $pb.PbList<Inventory>();
+  @$core.pragma('dart2js:noInline')
+  static Inventory getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Inventory>(create);
+  static Inventory? _defaultInstance;
+}
+
+class Notification_FCommand_Dismiss extends $pb.GeneratedMessage {
+  factory Notification_FCommand_Dismiss({
+    $core.String? notificationId,
+  }) {
+    final $result = create();
+    if (notificationId != null) {
+      $result.notificationId = notificationId;
+    }
+    return $result;
+  }
+  Notification_FCommand_Dismiss._() : super();
+  factory Notification_FCommand_Dismiss.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Notification_FCommand_Dismiss.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Notification.FCommand.Dismiss', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'notificationId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Notification_FCommand_Dismiss clone() => Notification_FCommand_Dismiss()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Notification_FCommand_Dismiss copyWith(void Function(Notification_FCommand_Dismiss) updates) => super.copyWith((message) => updates(message as Notification_FCommand_Dismiss)) as Notification_FCommand_Dismiss;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Notification_FCommand_Dismiss create() => Notification_FCommand_Dismiss._();
+  Notification_FCommand_Dismiss createEmptyInstance() => create();
+  static $pb.PbList<Notification_FCommand_Dismiss> createRepeated() => $pb.PbList<Notification_FCommand_Dismiss>();
+  @$core.pragma('dart2js:noInline')
+  static Notification_FCommand_Dismiss getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Notification_FCommand_Dismiss>(create);
+  static Notification_FCommand_Dismiss? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get notificationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set notificationId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNotificationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNotificationId() => clearField(1);
+}
+
+enum Notification_FCommand_Command {
+  dismiss, 
+  notSet
+}
+
+class Notification_FCommand extends $pb.GeneratedMessage {
+  factory Notification_FCommand({
+    Notification_FCommand_Dismiss? dismiss,
+  }) {
+    final $result = create();
+    if (dismiss != null) {
+      $result.dismiss = dismiss;
+    }
+    return $result;
+  }
+  Notification_FCommand._() : super();
+  factory Notification_FCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Notification_FCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Notification_FCommand_Command> _Notification_FCommand_CommandByTag = {
+    1 : Notification_FCommand_Command.dismiss,
+    0 : Notification_FCommand_Command.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Notification.FCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Notification_FCommand_Dismiss>(1, _omitFieldNames ? '' : 'dismiss', subBuilder: Notification_FCommand_Dismiss.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Notification_FCommand clone() => Notification_FCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Notification_FCommand copyWith(void Function(Notification_FCommand) updates) => super.copyWith((message) => updates(message as Notification_FCommand)) as Notification_FCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Notification_FCommand create() => Notification_FCommand._();
+  Notification_FCommand createEmptyInstance() => create();
+  static $pb.PbList<Notification_FCommand> createRepeated() => $pb.PbList<Notification_FCommand>();
+  @$core.pragma('dart2js:noInline')
+  static Notification_FCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Notification_FCommand>(create);
+  static Notification_FCommand? _defaultInstance;
+
+  Notification_FCommand_Command whichCommand() => _Notification_FCommand_CommandByTag[$_whichOneof(0)]!;
+  void clearCommand() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Notification_FCommand_Dismiss get dismiss => $_getN(0);
+  @$pb.TagNumber(1)
+  set dismiss(Notification_FCommand_Dismiss v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDismiss() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDismiss() => clearField(1);
+  @$pb.TagNumber(1)
+  Notification_FCommand_Dismiss ensureDismiss() => $_ensure(0);
+}
+
+class Notification_UEvent_Arrived extends $pb.GeneratedMessage {
+  factory Notification_UEvent_Arrived({
+    $core.String? notificationId,
+    $core.String? title,
+  }) {
+    final $result = create();
+    if (notificationId != null) {
+      $result.notificationId = notificationId;
+    }
+    if (title != null) {
+      $result.title = title;
+    }
+    return $result;
+  }
+  Notification_UEvent_Arrived._() : super();
+  factory Notification_UEvent_Arrived.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Notification_UEvent_Arrived.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Notification.UEvent.Arrived', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'notificationId')
+    ..aOS(2, _omitFieldNames ? '' : 'title')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Notification_UEvent_Arrived clone() => Notification_UEvent_Arrived()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Notification_UEvent_Arrived copyWith(void Function(Notification_UEvent_Arrived) updates) => super.copyWith((message) => updates(message as Notification_UEvent_Arrived)) as Notification_UEvent_Arrived;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Notification_UEvent_Arrived create() => Notification_UEvent_Arrived._();
+  Notification_UEvent_Arrived createEmptyInstance() => create();
+  static $pb.PbList<Notification_UEvent_Arrived> createRepeated() => $pb.PbList<Notification_UEvent_Arrived>();
+  @$core.pragma('dart2js:noInline')
+  static Notification_UEvent_Arrived getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Notification_UEvent_Arrived>(create);
+  static Notification_UEvent_Arrived? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get notificationId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set notificationId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNotificationId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNotificationId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get title => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set title($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTitle() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTitle() => clearField(2);
+}
+
+enum Notification_UEvent_Event {
+  arrived, 
+  notSet
+}
+
+class Notification_UEvent extends $pb.GeneratedMessage {
+  factory Notification_UEvent({
+    Notification_UEvent_Arrived? arrived,
+  }) {
+    final $result = create();
+    if (arrived != null) {
+      $result.arrived = arrived;
+    }
+    return $result;
+  }
+  Notification_UEvent._() : super();
+  factory Notification_UEvent.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Notification_UEvent.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Notification_UEvent_Event> _Notification_UEvent_EventByTag = {
+    1 : Notification_UEvent_Event.arrived,
+    0 : Notification_UEvent_Event.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Notification.UEvent', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Notification_UEvent_Arrived>(1, _omitFieldNames ? '' : 'arrived', subBuilder: Notification_UEvent_Arrived.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Notification_UEvent clone() => Notification_UEvent()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Notification_UEvent copyWith(void Function(Notification_UEvent) updates) => super.copyWith((message) => updates(message as Notification_UEvent)) as Notification_UEvent;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Notification_UEvent create() => Notification_UEvent._();
+  Notification_UEvent createEmptyInstance() => create();
+  static $pb.PbList<Notification_UEvent> createRepeated() => $pb.PbList<Notification_UEvent>();
+  @$core.pragma('dart2js:noInline')
+  static Notification_UEvent getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Notification_UEvent>(create);
+  static Notification_UEvent? _defaultInstance;
+
+  Notification_UEvent_Event whichEvent() => _Notification_UEvent_EventByTag[$_whichOneof(0)]!;
+  void clearEvent() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Notification_UEvent_Arrived get arrived => $_getN(0);
+  @$pb.TagNumber(1)
+  set arrived(Notification_UEvent_Arrived v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasArrived() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearArrived() => clearField(1);
+  @$pb.TagNumber(1)
+  Notification_UEvent_Arrived ensureArrived() => $_ensure(0);
+}
+
+/// 共有 inner パターン: Notification は Game と Admin の両方から参照される
+/// Unity 側では [ProtoRoute] で曖昧性を解消する
+/// Flutter 側では parse().route() で明示的にパスを指定するので曖昧性は発生しない
+class Notification extends $pb.GeneratedMessage {
+  factory Notification() => create();
+  Notification._() : super();
+  factory Notification.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Notification.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Notification', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Notification clone() => Notification()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Notification copyWith(void Function(Notification) updates) => super.copyWith((message) => updates(message as Notification)) as Notification;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Notification create() => Notification._();
+  Notification createEmptyInstance() => create();
+  static $pb.PbList<Notification> createRepeated() => $pb.PbList<Notification>();
+  @$core.pragma('dart2js:noInline')
+  static Notification getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Notification>(create);
+  static Notification? _defaultInstance;
+}
+
+enum Game_FCommand_Command {
+  notification, 
+  notSet
+}
+
+class Game_FCommand extends $pb.GeneratedMessage {
+  factory Game_FCommand({
+    Notification_FCommand? notification,
+  }) {
+    final $result = create();
+    if (notification != null) {
+      $result.notification = notification;
+    }
+    return $result;
+  }
+  Game_FCommand._() : super();
+  factory Game_FCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Game_FCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Game_FCommand_Command> _Game_FCommand_CommandByTag = {
+    1 : Game_FCommand_Command.notification,
+    0 : Game_FCommand_Command.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Game.FCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Notification_FCommand>(1, _omitFieldNames ? '' : 'notification', subBuilder: Notification_FCommand.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Game_FCommand clone() => Game_FCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Game_FCommand copyWith(void Function(Game_FCommand) updates) => super.copyWith((message) => updates(message as Game_FCommand)) as Game_FCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Game_FCommand create() => Game_FCommand._();
+  Game_FCommand createEmptyInstance() => create();
+  static $pb.PbList<Game_FCommand> createRepeated() => $pb.PbList<Game_FCommand>();
+  @$core.pragma('dart2js:noInline')
+  static Game_FCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Game_FCommand>(create);
+  static Game_FCommand? _defaultInstance;
+
+  Game_FCommand_Command whichCommand() => _Game_FCommand_CommandByTag[$_whichOneof(0)]!;
+  void clearCommand() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Notification_FCommand get notification => $_getN(0);
+  @$pb.TagNumber(1)
+  set notification(Notification_FCommand v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNotification() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNotification() => clearField(1);
+  @$pb.TagNumber(1)
+  Notification_FCommand ensureNotification() => $_ensure(0);
+}
+
+enum Game_UEvent_Event {
+  notification, 
+  notSet
+}
+
+class Game_UEvent extends $pb.GeneratedMessage {
+  factory Game_UEvent({
+    Notification_UEvent? notification,
+  }) {
+    final $result = create();
+    if (notification != null) {
+      $result.notification = notification;
+    }
+    return $result;
+  }
+  Game_UEvent._() : super();
+  factory Game_UEvent.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Game_UEvent.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Game_UEvent_Event> _Game_UEvent_EventByTag = {
+    1 : Game_UEvent_Event.notification,
+    0 : Game_UEvent_Event.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Game.UEvent', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Notification_UEvent>(1, _omitFieldNames ? '' : 'notification', subBuilder: Notification_UEvent.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Game_UEvent clone() => Game_UEvent()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Game_UEvent copyWith(void Function(Game_UEvent) updates) => super.copyWith((message) => updates(message as Game_UEvent)) as Game_UEvent;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Game_UEvent create() => Game_UEvent._();
+  Game_UEvent createEmptyInstance() => create();
+  static $pb.PbList<Game_UEvent> createRepeated() => $pb.PbList<Game_UEvent>();
+  @$core.pragma('dart2js:noInline')
+  static Game_UEvent getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Game_UEvent>(create);
+  static Game_UEvent? _defaultInstance;
+
+  Game_UEvent_Event whichEvent() => _Game_UEvent_EventByTag[$_whichOneof(0)]!;
+  void clearEvent() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Notification_UEvent get notification => $_getN(0);
+  @$pb.TagNumber(1)
+  set notification(Notification_UEvent v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNotification() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNotification() => clearField(1);
+  @$pb.TagNumber(1)
+  Notification_UEvent ensureNotification() => $_ensure(0);
+}
+
+class Game extends $pb.GeneratedMessage {
+  factory Game() => create();
+  Game._() : super();
+  factory Game.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Game.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Game', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Game clone() => Game()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Game copyWith(void Function(Game) updates) => super.copyWith((message) => updates(message as Game)) as Game;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Game create() => Game._();
+  Game createEmptyInstance() => create();
+  static $pb.PbList<Game> createRepeated() => $pb.PbList<Game>();
+  @$core.pragma('dart2js:noInline')
+  static Game getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Game>(create);
+  static Game? _defaultInstance;
+}
+
+enum Admin_FCommand_Command {
+  notification, 
+  notSet
+}
+
+class Admin_FCommand extends $pb.GeneratedMessage {
+  factory Admin_FCommand({
+    Notification_FCommand? notification,
+  }) {
+    final $result = create();
+    if (notification != null) {
+      $result.notification = notification;
+    }
+    return $result;
+  }
+  Admin_FCommand._() : super();
+  factory Admin_FCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Admin_FCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Admin_FCommand_Command> _Admin_FCommand_CommandByTag = {
+    1 : Admin_FCommand_Command.notification,
+    0 : Admin_FCommand_Command.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Admin.FCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Notification_FCommand>(1, _omitFieldNames ? '' : 'notification', subBuilder: Notification_FCommand.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Admin_FCommand clone() => Admin_FCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Admin_FCommand copyWith(void Function(Admin_FCommand) updates) => super.copyWith((message) => updates(message as Admin_FCommand)) as Admin_FCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Admin_FCommand create() => Admin_FCommand._();
+  Admin_FCommand createEmptyInstance() => create();
+  static $pb.PbList<Admin_FCommand> createRepeated() => $pb.PbList<Admin_FCommand>();
+  @$core.pragma('dart2js:noInline')
+  static Admin_FCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Admin_FCommand>(create);
+  static Admin_FCommand? _defaultInstance;
+
+  Admin_FCommand_Command whichCommand() => _Admin_FCommand_CommandByTag[$_whichOneof(0)]!;
+  void clearCommand() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Notification_FCommand get notification => $_getN(0);
+  @$pb.TagNumber(1)
+  set notification(Notification_FCommand v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNotification() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNotification() => clearField(1);
+  @$pb.TagNumber(1)
+  Notification_FCommand ensureNotification() => $_ensure(0);
+}
+
+enum Admin_UEvent_Event {
+  notification, 
+  notSet
+}
+
+class Admin_UEvent extends $pb.GeneratedMessage {
+  factory Admin_UEvent({
+    Notification_UEvent? notification,
+  }) {
+    final $result = create();
+    if (notification != null) {
+      $result.notification = notification;
+    }
+    return $result;
+  }
+  Admin_UEvent._() : super();
+  factory Admin_UEvent.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Admin_UEvent.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Admin_UEvent_Event> _Admin_UEvent_EventByTag = {
+    1 : Admin_UEvent_Event.notification,
+    0 : Admin_UEvent_Event.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Admin.UEvent', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..aOM<Notification_UEvent>(1, _omitFieldNames ? '' : 'notification', subBuilder: Notification_UEvent.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Admin_UEvent clone() => Admin_UEvent()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Admin_UEvent copyWith(void Function(Admin_UEvent) updates) => super.copyWith((message) => updates(message as Admin_UEvent)) as Admin_UEvent;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Admin_UEvent create() => Admin_UEvent._();
+  Admin_UEvent createEmptyInstance() => create();
+  static $pb.PbList<Admin_UEvent> createRepeated() => $pb.PbList<Admin_UEvent>();
+  @$core.pragma('dart2js:noInline')
+  static Admin_UEvent getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Admin_UEvent>(create);
+  static Admin_UEvent? _defaultInstance;
+
+  Admin_UEvent_Event whichEvent() => _Admin_UEvent_EventByTag[$_whichOneof(0)]!;
+  void clearEvent() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Notification_UEvent get notification => $_getN(0);
+  @$pb.TagNumber(1)
+  set notification(Notification_UEvent v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasNotification() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearNotification() => clearField(1);
+  @$pb.TagNumber(1)
+  Notification_UEvent ensureNotification() => $_ensure(0);
+}
+
+class Admin extends $pb.GeneratedMessage {
+  factory Admin() => create();
+  Admin._() : super();
+  factory Admin.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Admin.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Admin', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Admin clone() => Admin()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Admin copyWith(void Function(Admin) updates) => super.copyWith((message) => updates(message as Admin)) as Admin;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Admin create() => Admin._();
+  Admin createEmptyInstance() => create();
+  static $pb.PbList<Admin> createRepeated() => $pb.PbList<Admin>();
+  @$core.pragma('dart2js:noInline')
+  static Admin getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Admin>(create);
+  static Admin? _defaultInstance;
+}
+
+enum App_FCommand_Command {
+  cube, 
+  scene, 
+  effect, 
+  player, 
+  game, 
+  admin, 
+  notSet
+}
+
+class App_FCommand extends $pb.GeneratedMessage {
+  factory App_FCommand({
+    Cube_FCommand? cube,
+    Scene_FCommand? scene,
+    Effect_FCommand? effect,
+    Player_FCommand? player,
+    Game_FCommand? game,
+    Admin_FCommand? admin,
+  }) {
+    final $result = create();
+    if (cube != null) {
+      $result.cube = cube;
+    }
+    if (scene != null) {
+      $result.scene = scene;
+    }
+    if (effect != null) {
+      $result.effect = effect;
+    }
+    if (player != null) {
+      $result.player = player;
+    }
+    if (game != null) {
+      $result.game = game;
+    }
+    if (admin != null) {
+      $result.admin = admin;
+    }
+    return $result;
+  }
+  App_FCommand._() : super();
+  factory App_FCommand.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory App_FCommand.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, App_FCommand_Command> _App_FCommand_CommandByTag = {
+    1 : App_FCommand_Command.cube,
+    2 : App_FCommand_Command.scene,
+    3 : App_FCommand_Command.effect,
+    4 : App_FCommand_Command.player,
+    5 : App_FCommand_Command.game,
+    6 : App_FCommand_Command.admin,
+    0 : App_FCommand_Command.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'App.FCommand', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3, 4, 5, 6])
+    ..aOM<Cube_FCommand>(1, _omitFieldNames ? '' : 'cube', subBuilder: Cube_FCommand.create)
+    ..aOM<Scene_FCommand>(2, _omitFieldNames ? '' : 'scene', subBuilder: Scene_FCommand.create)
+    ..aOM<Effect_FCommand>(3, _omitFieldNames ? '' : 'effect', subBuilder: Effect_FCommand.create)
+    ..aOM<Player_FCommand>(4, _omitFieldNames ? '' : 'player', subBuilder: Player_FCommand.create)
+    ..aOM<Game_FCommand>(5, _omitFieldNames ? '' : 'game', subBuilder: Game_FCommand.create)
+    ..aOM<Admin_FCommand>(6, _omitFieldNames ? '' : 'admin', subBuilder: Admin_FCommand.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  App_FCommand clone() => App_FCommand()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  App_FCommand copyWith(void Function(App_FCommand) updates) => super.copyWith((message) => updates(message as App_FCommand)) as App_FCommand;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static App_FCommand create() => App_FCommand._();
+  App_FCommand createEmptyInstance() => create();
+  static $pb.PbList<App_FCommand> createRepeated() => $pb.PbList<App_FCommand>();
+  @$core.pragma('dart2js:noInline')
+  static App_FCommand getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<App_FCommand>(create);
+  static App_FCommand? _defaultInstance;
+
+  App_FCommand_Command whichCommand() => _App_FCommand_CommandByTag[$_whichOneof(0)]!;
+  void clearCommand() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Cube_FCommand get cube => $_getN(0);
+  @$pb.TagNumber(1)
+  set cube(Cube_FCommand v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCube() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCube() => clearField(1);
+  @$pb.TagNumber(1)
+  Cube_FCommand ensureCube() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  Scene_FCommand get scene => $_getN(1);
+  @$pb.TagNumber(2)
+  set scene(Scene_FCommand v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasScene() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearScene() => clearField(2);
+  @$pb.TagNumber(2)
+  Scene_FCommand ensureScene() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  Effect_FCommand get effect => $_getN(2);
+  @$pb.TagNumber(3)
+  set effect(Effect_FCommand v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasEffect() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEffect() => clearField(3);
+  @$pb.TagNumber(3)
+  Effect_FCommand ensureEffect() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  Player_FCommand get player => $_getN(3);
+  @$pb.TagNumber(4)
+  set player(Player_FCommand v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPlayer() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPlayer() => clearField(4);
+  @$pb.TagNumber(4)
+  Player_FCommand ensurePlayer() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  Game_FCommand get game => $_getN(4);
+  @$pb.TagNumber(5)
+  set game(Game_FCommand v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasGame() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearGame() => clearField(5);
+  @$pb.TagNumber(5)
+  Game_FCommand ensureGame() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  Admin_FCommand get admin => $_getN(5);
+  @$pb.TagNumber(6)
+  set admin(Admin_FCommand v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasAdmin() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearAdmin() => clearField(6);
+  @$pb.TagNumber(6)
+  Admin_FCommand ensureAdmin() => $_ensure(5);
+}
+
+enum App_UEvent_Event {
+  cube, 
+  scene, 
+  timer, 
+  player, 
+  game, 
+  admin, 
+  notSet
+}
+
+class App_UEvent extends $pb.GeneratedMessage {
+  factory App_UEvent({
+    Cube_UEvent? cube,
+    Scene_UEvent? scene,
+    Timer_UEvent? timer,
+    Player_UEvent? player,
+    Game_UEvent? game,
+    Admin_UEvent? admin,
+  }) {
+    final $result = create();
+    if (cube != null) {
+      $result.cube = cube;
+    }
+    if (scene != null) {
+      $result.scene = scene;
+    }
+    if (timer != null) {
+      $result.timer = timer;
+    }
+    if (player != null) {
+      $result.player = player;
+    }
+    if (game != null) {
+      $result.game = game;
+    }
+    if (admin != null) {
+      $result.admin = admin;
+    }
+    return $result;
+  }
+  App_UEvent._() : super();
+  factory App_UEvent.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory App_UEvent.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, App_UEvent_Event> _App_UEvent_EventByTag = {
+    1 : App_UEvent_Event.cube,
+    2 : App_UEvent_Event.scene,
+    3 : App_UEvent_Event.timer,
+    4 : App_UEvent_Event.player,
+    5 : App_UEvent_Event.game,
+    6 : App_UEvent_Event.admin,
+    0 : App_UEvent_Event.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'App.UEvent', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3, 4, 5, 6])
+    ..aOM<Cube_UEvent>(1, _omitFieldNames ? '' : 'cube', subBuilder: Cube_UEvent.create)
+    ..aOM<Scene_UEvent>(2, _omitFieldNames ? '' : 'scene', subBuilder: Scene_UEvent.create)
+    ..aOM<Timer_UEvent>(3, _omitFieldNames ? '' : 'timer', subBuilder: Timer_UEvent.create)
+    ..aOM<Player_UEvent>(4, _omitFieldNames ? '' : 'player', subBuilder: Player_UEvent.create)
+    ..aOM<Game_UEvent>(5, _omitFieldNames ? '' : 'game', subBuilder: Game_UEvent.create)
+    ..aOM<Admin_UEvent>(6, _omitFieldNames ? '' : 'admin', subBuilder: Admin_UEvent.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  App_UEvent clone() => App_UEvent()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  App_UEvent copyWith(void Function(App_UEvent) updates) => super.copyWith((message) => updates(message as App_UEvent)) as App_UEvent;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static App_UEvent create() => App_UEvent._();
+  App_UEvent createEmptyInstance() => create();
+  static $pb.PbList<App_UEvent> createRepeated() => $pb.PbList<App_UEvent>();
+  @$core.pragma('dart2js:noInline')
+  static App_UEvent getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<App_UEvent>(create);
+  static App_UEvent? _defaultInstance;
+
+  App_UEvent_Event whichEvent() => _App_UEvent_EventByTag[$_whichOneof(0)]!;
+  void clearEvent() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  Cube_UEvent get cube => $_getN(0);
+  @$pb.TagNumber(1)
+  set cube(Cube_UEvent v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCube() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCube() => clearField(1);
+  @$pb.TagNumber(1)
+  Cube_UEvent ensureCube() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  Scene_UEvent get scene => $_getN(1);
+  @$pb.TagNumber(2)
+  set scene(Scene_UEvent v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasScene() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearScene() => clearField(2);
+  @$pb.TagNumber(2)
+  Scene_UEvent ensureScene() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  Timer_UEvent get timer => $_getN(2);
+  @$pb.TagNumber(3)
+  set timer(Timer_UEvent v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasTimer() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTimer() => clearField(3);
+  @$pb.TagNumber(3)
+  Timer_UEvent ensureTimer() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  Player_UEvent get player => $_getN(3);
+  @$pb.TagNumber(4)
+  set player(Player_UEvent v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPlayer() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPlayer() => clearField(4);
+  @$pb.TagNumber(4)
+  Player_UEvent ensurePlayer() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  Game_UEvent get game => $_getN(4);
+  @$pb.TagNumber(5)
+  set game(Game_UEvent v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasGame() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearGame() => clearField(5);
+  @$pb.TagNumber(5)
+  Game_UEvent ensureGame() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  Admin_UEvent get admin => $_getN(5);
+  @$pb.TagNumber(6)
+  set admin(Admin_UEvent v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasAdmin() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearAdmin() => clearField(6);
+  @$pb.TagNumber(6)
+  Admin_UEvent ensureAdmin() => $_ensure(5);
+}
+
+/// Root wrapper: 各フィーチャーの Command / Event を oneof で包む
+/// Gateway はこの型で通信し、各 Presenter は inner 型を [ProtoHandler] に指定することで
+/// Source Generator がルーティングコードを自動生成する
+class App extends $pb.GeneratedMessage {
+  factory App() => create();
+  App._() : super();
+  factory App.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory App.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'App', package: const $pb.PackageName(_omitMessageNames ? '' : 'cortis_flutter_sample'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  App clone() => App()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  App copyWith(void Function(App) updates) => super.copyWith((message) => updates(message as App)) as App;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static App create() => App._();
+  App createEmptyInstance() => create();
+  static $pb.PbList<App> createRepeated() => $pb.PbList<App>();
+  @$core.pragma('dart2js:noInline')
+  static App getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<App>(create);
+  static App? _defaultInstance;
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,15 +1,18 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:cortis_flutter/cortis_flutter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_unity_widget_2/flutter_unity_widget_2.dart';
 import 'package:cortis_flutter_sample/gen/proto/google/protobuf/any.pb.dart';
 import 'package:protobuf/protobuf.dart';
 
-class UnityMessenger {
+class UnityMessenger extends MessageGateway {
   UnityWidgetController? _unityWidgetController;
-  final StreamController<Any> _controller = StreamController.broadcast();
+  final StreamController<GeneratedMessage> _controller =
+      StreamController.broadcast();
 
-  Stream<Any> get onEvent => _controller.stream;
+  @override
+  Stream<GeneratedMessage> get onEvent => _controller.stream;
 
   void dispose() {
     _controller.close();
@@ -23,14 +26,14 @@ class UnityMessenger {
     if (message is String) {
       try {
         final decodedBytes = base64Decode(message);
-        final any = Any.fromBuffer(decodedBytes);
-        _controller.add(any);
+        _controller.add(Any.fromBuffer(decodedBytes));
       } catch (e) {
         debugPrint('Error decoding Unity message: $e');
       }
     }
   }
 
+  @override
   void sendCommand(GeneratedMessage command) {
     final controller = _unityWidgetController;
     if (controller == null) {

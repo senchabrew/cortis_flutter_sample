@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cortis_flutter_sample/page/scene_list_page/scene_list_view_model.dart';
-import 'package:provider/provider.dart';
 
-class SceneListPage extends StatelessWidget {
+class SceneListPage extends ConsumerWidget {
   const SceneListPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final viewModel = context.watch<SceneListViewModel>();
+  Widget build(BuildContext context, WidgetRef ref) {
+    final sceneList = ref.watch(sceneListViewModelProvider);
+    final viewModel = ref.read(sceneListViewModelProvider.notifier);
     final theme = Theme.of(context);
 
     return Scaffold(
@@ -16,10 +17,10 @@ class SceneListPage extends StatelessWidget {
       ),
       body: ListView.separated(
         padding: const EdgeInsets.all(16),
-        itemCount: viewModel.sceneList.length,
+        itemCount: sceneList.length,
         separatorBuilder: (_, __) => const SizedBox(height: 8),
         itemBuilder: (context, index) {
-          final item = viewModel.sceneList[index];
+          final item = sceneList[index];
           final isAvailable = item == 'Cube' || item == 'Sphere';
 
           return Card(

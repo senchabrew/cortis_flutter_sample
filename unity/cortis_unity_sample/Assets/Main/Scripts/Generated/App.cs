@@ -54,9 +54,17 @@ namespace CortisFlutterSample {
             "b3J0aXNfZmx1dHRlcl9zYW1wbGUuVGltZXIuVUV2ZW50LlRpY2tIABJCCglt",
             "aWxlc3RvbmUYAiABKAsyLS5jb3J0aXNfZmx1dHRlcl9zYW1wbGUuVGltZXIu",
             "VUV2ZW50Lk1pbGVzdG9uZUgAGhcKBFRpY2sSDwoHZWxhcHNlZBgBIAEoAhoa",
-            "CglNaWxlc3RvbmUSDQoFY291bnQYASABKAVCBwoFZXZlbnQqRAoJU2NlbmVU",
-            "eXBlEhUKEVNDRU5FX1VOU1BFQ0lGSUVEEAASDgoKU0NFTkVfQ1VCRRABEhAK",
-            "DFNDRU5FX1NQSEVSRRACYgZwcm90bzM="));
+            "CglNaWxlc3RvbmUSDQoFY291bnQYASABKAVCBwoFZXZlbnQi+QIKA0FwcBq9",
+            "AQoIRkNvbW1hbmQSNAoEY3ViZRgBIAEoCzIkLmNvcnRpc19mbHV0dGVyX3Nh",
+            "bXBsZS5DdWJlLkZDb21tYW5kSAASNgoFc2NlbmUYAiABKAsyJS5jb3J0aXNf",
+            "Zmx1dHRlcl9zYW1wbGUuU2NlbmUuRkNvbW1hbmRIABI4CgZlZmZlY3QYAyAB",
+            "KAsyJi5jb3J0aXNfZmx1dHRlcl9zYW1wbGUuRWZmZWN0LkZDb21tYW5kSABC",
+            "CQoHY29tbWFuZBqxAQoGVUV2ZW50EjIKBGN1YmUYASABKAsyIi5jb3J0aXNf",
+            "Zmx1dHRlcl9zYW1wbGUuQ3ViZS5VRXZlbnRIABI0CgVzY2VuZRgCIAEoCzIj",
+            "LmNvcnRpc19mbHV0dGVyX3NhbXBsZS5TY2VuZS5VRXZlbnRIABI0CgV0aW1l",
+            "chgDIAEoCzIjLmNvcnRpc19mbHV0dGVyX3NhbXBsZS5UaW1lci5VRXZlbnRI",
+            "AEIHCgVldmVudCpECglTY2VuZVR5cGUSFQoRU0NFTkVfVU5TUEVDSUZJRUQQ",
+            "ABIOCgpTQ0VORV9DVUJFEAESEAoMU0NFTkVfU1BIRVJFEAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::CortisFlutterSample.SceneType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -70,7 +78,9 @@ namespace CortisFlutterSample {
             new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.Effect), global::CortisFlutterSample.Effect.Parser, null, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.Effect.Types.FCommand), global::CortisFlutterSample.Effect.Types.FCommand.Parser, new[]{ "PlaySound", "Vibrate" }, new[]{ "Command" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.Effect.Types.FCommand.Types.PlaySound), global::CortisFlutterSample.Effect.Types.FCommand.Types.PlaySound.Parser, new[]{ "SoundName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.Effect.Types.FCommand.Types.Vibrate), global::CortisFlutterSample.Effect.Types.FCommand.Types.Vibrate.Parser, new[]{ "Duration" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.Timer), global::CortisFlutterSample.Timer.Parser, null, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.Timer.Types.UEvent), global::CortisFlutterSample.Timer.Types.UEvent.Parser, new[]{ "Tick", "Milestone" }, new[]{ "Event" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.Timer.Types.UEvent.Types.Tick), global::CortisFlutterSample.Timer.Types.UEvent.Types.Tick.Parser, new[]{ "Elapsed" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.Timer.Types.UEvent.Types.Milestone), global::CortisFlutterSample.Timer.Types.UEvent.Types.Milestone.Parser, new[]{ "Count" }, null, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.Timer.Types.UEvent.Types.Milestone), global::CortisFlutterSample.Timer.Types.UEvent.Types.Milestone.Parser, new[]{ "Count" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.App), global::CortisFlutterSample.App.Parser, null, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.App.Types.FCommand), global::CortisFlutterSample.App.Types.FCommand.Parser, new[]{ "Cube", "Scene", "Effect" }, new[]{ "Command" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::CortisFlutterSample.App.Types.UEvent), global::CortisFlutterSample.App.Types.UEvent.Parser, new[]{ "Cube", "Scene", "Timer" }, new[]{ "Event" }, null, null, null)})
           }));
     }
     #endregion
@@ -4711,6 +4721,874 @@ namespace CortisFlutterSample {
 
         }
         #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Root wrapper: 各フィーチャーの Command / Event を oneof で包む
+  /// Gateway はこの型で通信し、各 Presenter は inner 型を [ProtoHandler] に指定することで
+  /// Source Generator がルーティングコードを自動生成する
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class App : pb::IMessage<App>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<App> _parser = new pb::MessageParser<App>(() => new App());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<App> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::CortisFlutterSample.AppReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public App() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public App(App other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public App Clone() {
+      return new App(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as App);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(App other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(App other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the App message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FCommand : pb::IMessage<FCommand>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FCommand> _parser = new pb::MessageParser<FCommand>(() => new FCommand());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FCommand> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::CortisFlutterSample.App.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FCommand() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FCommand(FCommand other) : this() {
+          switch (other.CommandCase) {
+            case CommandOneofCase.Cube:
+              Cube = other.Cube.Clone();
+              break;
+            case CommandOneofCase.Scene:
+              Scene = other.Scene.Clone();
+              break;
+            case CommandOneofCase.Effect:
+              Effect = other.Effect.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FCommand Clone() {
+          return new FCommand(this);
+        }
+
+        /// <summary>Field number for the "cube" field.</summary>
+        public const int CubeFieldNumber = 1;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::CortisFlutterSample.Cube.Types.FCommand Cube {
+          get { return commandCase_ == CommandOneofCase.Cube ? (global::CortisFlutterSample.Cube.Types.FCommand) command_ : null; }
+          set {
+            command_ = value;
+            commandCase_ = value == null ? CommandOneofCase.None : CommandOneofCase.Cube;
+          }
+        }
+
+        /// <summary>Field number for the "scene" field.</summary>
+        public const int SceneFieldNumber = 2;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::CortisFlutterSample.Scene.Types.FCommand Scene {
+          get { return commandCase_ == CommandOneofCase.Scene ? (global::CortisFlutterSample.Scene.Types.FCommand) command_ : null; }
+          set {
+            command_ = value;
+            commandCase_ = value == null ? CommandOneofCase.None : CommandOneofCase.Scene;
+          }
+        }
+
+        /// <summary>Field number for the "effect" field.</summary>
+        public const int EffectFieldNumber = 3;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::CortisFlutterSample.Effect.Types.FCommand Effect {
+          get { return commandCase_ == CommandOneofCase.Effect ? (global::CortisFlutterSample.Effect.Types.FCommand) command_ : null; }
+          set {
+            command_ = value;
+            commandCase_ = value == null ? CommandOneofCase.None : CommandOneofCase.Effect;
+          }
+        }
+
+        private object command_;
+        /// <summary>Enum of possible cases for the "command" oneof.</summary>
+        public enum CommandOneofCase {
+          None = 0,
+          Cube = 1,
+          Scene = 2,
+          Effect = 3,
+        }
+        private CommandOneofCase commandCase_ = CommandOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CommandOneofCase CommandCase {
+          get { return commandCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCommand() {
+          commandCase_ = CommandOneofCase.None;
+          command_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FCommand);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FCommand other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Cube, other.Cube)) return false;
+          if (!object.Equals(Scene, other.Scene)) return false;
+          if (!object.Equals(Effect, other.Effect)) return false;
+          if (CommandCase != other.CommandCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (commandCase_ == CommandOneofCase.Cube) hash ^= Cube.GetHashCode();
+          if (commandCase_ == CommandOneofCase.Scene) hash ^= Scene.GetHashCode();
+          if (commandCase_ == CommandOneofCase.Effect) hash ^= Effect.GetHashCode();
+          hash ^= (int) commandCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (commandCase_ == CommandOneofCase.Cube) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Cube);
+          }
+          if (commandCase_ == CommandOneofCase.Scene) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Scene);
+          }
+          if (commandCase_ == CommandOneofCase.Effect) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Effect);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (commandCase_ == CommandOneofCase.Cube) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Cube);
+          }
+          if (commandCase_ == CommandOneofCase.Scene) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Scene);
+          }
+          if (commandCase_ == CommandOneofCase.Effect) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Effect);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (commandCase_ == CommandOneofCase.Cube) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Cube);
+          }
+          if (commandCase_ == CommandOneofCase.Scene) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scene);
+          }
+          if (commandCase_ == CommandOneofCase.Effect) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Effect);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FCommand other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.CommandCase) {
+            case CommandOneofCase.Cube:
+              if (Cube == null) {
+                Cube = new global::CortisFlutterSample.Cube.Types.FCommand();
+              }
+              Cube.MergeFrom(other.Cube);
+              break;
+            case CommandOneofCase.Scene:
+              if (Scene == null) {
+                Scene = new global::CortisFlutterSample.Scene.Types.FCommand();
+              }
+              Scene.MergeFrom(other.Scene);
+              break;
+            case CommandOneofCase.Effect:
+              if (Effect == null) {
+                Effect = new global::CortisFlutterSample.Effect.Types.FCommand();
+              }
+              Effect.MergeFrom(other.Effect);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::CortisFlutterSample.Cube.Types.FCommand subBuilder = new global::CortisFlutterSample.Cube.Types.FCommand();
+                if (commandCase_ == CommandOneofCase.Cube) {
+                  subBuilder.MergeFrom(Cube);
+                }
+                input.ReadMessage(subBuilder);
+                Cube = subBuilder;
+                break;
+              }
+              case 18: {
+                global::CortisFlutterSample.Scene.Types.FCommand subBuilder = new global::CortisFlutterSample.Scene.Types.FCommand();
+                if (commandCase_ == CommandOneofCase.Scene) {
+                  subBuilder.MergeFrom(Scene);
+                }
+                input.ReadMessage(subBuilder);
+                Scene = subBuilder;
+                break;
+              }
+              case 26: {
+                global::CortisFlutterSample.Effect.Types.FCommand subBuilder = new global::CortisFlutterSample.Effect.Types.FCommand();
+                if (commandCase_ == CommandOneofCase.Effect) {
+                  subBuilder.MergeFrom(Effect);
+                }
+                input.ReadMessage(subBuilder);
+                Effect = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::CortisFlutterSample.Cube.Types.FCommand subBuilder = new global::CortisFlutterSample.Cube.Types.FCommand();
+                if (commandCase_ == CommandOneofCase.Cube) {
+                  subBuilder.MergeFrom(Cube);
+                }
+                input.ReadMessage(subBuilder);
+                Cube = subBuilder;
+                break;
+              }
+              case 18: {
+                global::CortisFlutterSample.Scene.Types.FCommand subBuilder = new global::CortisFlutterSample.Scene.Types.FCommand();
+                if (commandCase_ == CommandOneofCase.Scene) {
+                  subBuilder.MergeFrom(Scene);
+                }
+                input.ReadMessage(subBuilder);
+                Scene = subBuilder;
+                break;
+              }
+              case 26: {
+                global::CortisFlutterSample.Effect.Types.FCommand subBuilder = new global::CortisFlutterSample.Effect.Types.FCommand();
+                if (commandCase_ == CommandOneofCase.Effect) {
+                  subBuilder.MergeFrom(Effect);
+                }
+                input.ReadMessage(subBuilder);
+                Effect = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class UEvent : pb::IMessage<UEvent>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<UEvent> _parser = new pb::MessageParser<UEvent>(() => new UEvent());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<UEvent> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::CortisFlutterSample.App.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UEvent() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UEvent(UEvent other) : this() {
+          switch (other.EventCase) {
+            case EventOneofCase.Cube:
+              Cube = other.Cube.Clone();
+              break;
+            case EventOneofCase.Scene:
+              Scene = other.Scene.Clone();
+              break;
+            case EventOneofCase.Timer:
+              Timer = other.Timer.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UEvent Clone() {
+          return new UEvent(this);
+        }
+
+        /// <summary>Field number for the "cube" field.</summary>
+        public const int CubeFieldNumber = 1;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::CortisFlutterSample.Cube.Types.UEvent Cube {
+          get { return eventCase_ == EventOneofCase.Cube ? (global::CortisFlutterSample.Cube.Types.UEvent) event_ : null; }
+          set {
+            event_ = value;
+            eventCase_ = value == null ? EventOneofCase.None : EventOneofCase.Cube;
+          }
+        }
+
+        /// <summary>Field number for the "scene" field.</summary>
+        public const int SceneFieldNumber = 2;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::CortisFlutterSample.Scene.Types.UEvent Scene {
+          get { return eventCase_ == EventOneofCase.Scene ? (global::CortisFlutterSample.Scene.Types.UEvent) event_ : null; }
+          set {
+            event_ = value;
+            eventCase_ = value == null ? EventOneofCase.None : EventOneofCase.Scene;
+          }
+        }
+
+        /// <summary>Field number for the "timer" field.</summary>
+        public const int TimerFieldNumber = 3;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::CortisFlutterSample.Timer.Types.UEvent Timer {
+          get { return eventCase_ == EventOneofCase.Timer ? (global::CortisFlutterSample.Timer.Types.UEvent) event_ : null; }
+          set {
+            event_ = value;
+            eventCase_ = value == null ? EventOneofCase.None : EventOneofCase.Timer;
+          }
+        }
+
+        private object event_;
+        /// <summary>Enum of possible cases for the "event" oneof.</summary>
+        public enum EventOneofCase {
+          None = 0,
+          Cube = 1,
+          Scene = 2,
+          Timer = 3,
+        }
+        private EventOneofCase eventCase_ = EventOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EventOneofCase EventCase {
+          get { return eventCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearEvent() {
+          eventCase_ = EventOneofCase.None;
+          event_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as UEvent);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(UEvent other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Cube, other.Cube)) return false;
+          if (!object.Equals(Scene, other.Scene)) return false;
+          if (!object.Equals(Timer, other.Timer)) return false;
+          if (EventCase != other.EventCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (eventCase_ == EventOneofCase.Cube) hash ^= Cube.GetHashCode();
+          if (eventCase_ == EventOneofCase.Scene) hash ^= Scene.GetHashCode();
+          if (eventCase_ == EventOneofCase.Timer) hash ^= Timer.GetHashCode();
+          hash ^= (int) eventCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (eventCase_ == EventOneofCase.Cube) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Cube);
+          }
+          if (eventCase_ == EventOneofCase.Scene) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Scene);
+          }
+          if (eventCase_ == EventOneofCase.Timer) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Timer);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (eventCase_ == EventOneofCase.Cube) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Cube);
+          }
+          if (eventCase_ == EventOneofCase.Scene) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Scene);
+          }
+          if (eventCase_ == EventOneofCase.Timer) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Timer);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (eventCase_ == EventOneofCase.Cube) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Cube);
+          }
+          if (eventCase_ == EventOneofCase.Scene) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scene);
+          }
+          if (eventCase_ == EventOneofCase.Timer) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timer);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(UEvent other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.EventCase) {
+            case EventOneofCase.Cube:
+              if (Cube == null) {
+                Cube = new global::CortisFlutterSample.Cube.Types.UEvent();
+              }
+              Cube.MergeFrom(other.Cube);
+              break;
+            case EventOneofCase.Scene:
+              if (Scene == null) {
+                Scene = new global::CortisFlutterSample.Scene.Types.UEvent();
+              }
+              Scene.MergeFrom(other.Scene);
+              break;
+            case EventOneofCase.Timer:
+              if (Timer == null) {
+                Timer = new global::CortisFlutterSample.Timer.Types.UEvent();
+              }
+              Timer.MergeFrom(other.Timer);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::CortisFlutterSample.Cube.Types.UEvent subBuilder = new global::CortisFlutterSample.Cube.Types.UEvent();
+                if (eventCase_ == EventOneofCase.Cube) {
+                  subBuilder.MergeFrom(Cube);
+                }
+                input.ReadMessage(subBuilder);
+                Cube = subBuilder;
+                break;
+              }
+              case 18: {
+                global::CortisFlutterSample.Scene.Types.UEvent subBuilder = new global::CortisFlutterSample.Scene.Types.UEvent();
+                if (eventCase_ == EventOneofCase.Scene) {
+                  subBuilder.MergeFrom(Scene);
+                }
+                input.ReadMessage(subBuilder);
+                Scene = subBuilder;
+                break;
+              }
+              case 26: {
+                global::CortisFlutterSample.Timer.Types.UEvent subBuilder = new global::CortisFlutterSample.Timer.Types.UEvent();
+                if (eventCase_ == EventOneofCase.Timer) {
+                  subBuilder.MergeFrom(Timer);
+                }
+                input.ReadMessage(subBuilder);
+                Timer = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::CortisFlutterSample.Cube.Types.UEvent subBuilder = new global::CortisFlutterSample.Cube.Types.UEvent();
+                if (eventCase_ == EventOneofCase.Cube) {
+                  subBuilder.MergeFrom(Cube);
+                }
+                input.ReadMessage(subBuilder);
+                Cube = subBuilder;
+                break;
+              }
+              case 18: {
+                global::CortisFlutterSample.Scene.Types.UEvent subBuilder = new global::CortisFlutterSample.Scene.Types.UEvent();
+                if (eventCase_ == EventOneofCase.Scene) {
+                  subBuilder.MergeFrom(Scene);
+                }
+                input.ReadMessage(subBuilder);
+                Scene = subBuilder;
+                break;
+              }
+              case 26: {
+                global::CortisFlutterSample.Timer.Types.UEvent subBuilder = new global::CortisFlutterSample.Timer.Types.UEvent();
+                if (eventCase_ == EventOneofCase.Timer) {
+                  subBuilder.MergeFrom(Timer);
+                }
+                input.ReadMessage(subBuilder);
+                Timer = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
